@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Primefaces Test</title>
+</h:head>
+
+<h:body>
+    <p>Update not working properly, one need to hit F5 for refresh.</p>
+    <h:form id="form1">
+        <p:panel id="button_panel" widgetVar="testPanel" closable="true" toggleable="true" visible="#{test1View.panelVisible}">
+            <h1>Testing</h1>
+        </p:panel>
+
+        <p:commandButton value="Show Panel" actionListener="#{test1View.setPanelVisible(true)}" update="form1"/>
+
+        <p:commandButton value="Hide Panel" actionListener="#{test1View.setPanelVisible(false)}" update="form1" />
+    </h:form>
+</h:body>
+
+</html>

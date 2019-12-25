@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Primefaces Test</title>
+</h:head>
+
+<h:body>
+    <script type="text/javascript">
+        pfesc = PrimeFaces.escapeClientId;
+    </script>
+    <h:form id="form1">
+        <p:panel id="panel1">
+            <h1>Testing</h1>
+        </p:panel>
+
+        <p:commandButton value="Show Panel" onclick="jQuery(pfesc('form1:panel1')).show()"/>
+
+        <p:commandButton value="Hide Panel" onclick="jQuery(pfesc('form1:panel1')).hide()" />
+    </h:form>
+</h:body>
+
+</html>

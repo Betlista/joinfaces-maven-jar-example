@@ -17,9 +17,9 @@
             <h1>Testing</h1>
         </p:panel>
 
-        <p:commandButton value="Show Panel" actionListener="#{test1View.setPanelVisible(true)}" update="form1"/>
+        <p:commandButton value="Show Panel" actionListener="#{test1View.setPanelVisible(true)}" update="@form"/>
 
-        <p:commandButton value="Hide Panel" actionListener="#{test1View.setPanelVisible(false)}" update="form1" />
+        <p:commandButton value="Hide Panel" actionListener="#{test1View.setPanelVisible(false)}" update="@form" />
     </h:form>
 </h:body>
 

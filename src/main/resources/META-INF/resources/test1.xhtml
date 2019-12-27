@@ -12,7 +12,7 @@
 
 <h:body>
 
-    <p:dataTable var="car" value="#{dtBasicView.cars}">
+    <p:dataTable var="car" value="#{basicView1.cars}" stickyHeader="true">
         <p:column headerText="Id">
             <h:outputText value="#{car.id}" />
         </p:column>

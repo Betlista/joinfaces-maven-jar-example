@@ -42,22 +42,22 @@
         </p:tab>
     </p:tabView>
 
-    <script type="text/javascript">
-        function tableResize() {
-            let windowHeight = jQuery(window).height()
-            console.log(windowHeight);
-            let tableDiv = jQuery('#tabView1\\:table1 > .ui-datatable-scrollable-body')
-            console.log(tableDiv);
-            let tableDivTopOffset = tableDiv.offset().top;
-            console.log(tableDivTopOffset);
-            // 22 = tab1.padding.bottom (17.6) + tabView1.padding.bottom (3.5) + border (1)
-            tableDiv.css('max-height', windowHeight - tableDivTopOffset - 22);
-        }
-        tableResize();
-        window.addEventListener("resize", tableResize);
-    </script>
-
 </div>
+
+<script type="text/javascript">
+    function tableResize() {
+        let windowHeight = jQuery(window).height()
+        console.log(windowHeight);
+        let tableDiv = jQuery('#tabView1\\:table1 > .ui-datatable-scrollable-body')
+        console.log(tableDiv);
+        let tableDivTopOffset = tableDiv.offset().top;
+        console.log(tableDivTopOffset);
+        // 22 = tab1.padding.bottom (17.6) + tabView1.padding.bottom (3.5) + border (1)
+        tableDiv.css('max-height', windowHeight - tableDivTopOffset - 22);
+    }
+    tableResize();
+    window.addEventListener("resize", tableResize);
+</script>
 
 </h:body>
 
